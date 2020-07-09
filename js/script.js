@@ -13,7 +13,7 @@ $(document).ready(function() {
   }
   console.log('I numeri casuali sono: ' + arrayNumCasuali);
 
-  })
+});
 
 
 
@@ -40,11 +40,13 @@ var punteggio = 0;
 
 console.log('Hai totalizzato ' + punteggio + ' punti');
 
-},3000);
+},3000*10);
 
 
 
 });
+
+
 
 // functions
 function getRandomIntInclusive(min, max) {
