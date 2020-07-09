@@ -19,7 +19,7 @@ console.log(arrayNumCasuali);
 var timer = setTimeout(function() {
   console.log(timer);
   console.log('hello');
-  };
+
 
 },3000*10);
 
@@ -29,16 +29,38 @@ for (var i = 0; i < 5; i++) {
   var numUtente = parseInt(prompt('Inserisci i numeri che hai visto' ));
   arrayNumUtente.push(numUtente);
 
+};
+
 console.log(arrayNumUtente);
 
-// Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati
-
-
 });
+
+// Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati
+// var punteggio = 0;
+// var numIndovinati = [];
+// for (var i = 0; i < arrayNumUtente.length; i++) {
+//   if (checkCompare(arrayNumCasuali,arrayNumUtente[i])) {
+//     punteggio++
+//     indovinati.push(arrayNumUtente[i])
+//   }
+//
+// }
+
+
 
 // functions
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function checkCompare (array, num ){
+  var key = false;
+  for (var i = 0; i < array.length; i++) {
+   if (array[i]== num) {
+     key = true;
+   }
+ }
+ return key;
 }
